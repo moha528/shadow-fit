@@ -122,9 +122,11 @@ export function SubNav({ section }: { section: string }) {
           </div>
 
           {section === "/dashboard" && (
-            <Button size="sm" className="bg-emerald-600 hover:bg-emerald-700 text-white h-9">
-              <Zap className="mr-2 h-4 w-4" />
-              Nouvel entraînement
+            <Button size="sm" className="bg-emerald-600 hover:bg-emerald-700 text-white h-9" asChild>
+              <Link href="/workouts/create">
+                <Zap className="mr-2 h-4 w-4" />
+                Nouvel entraînement
+              </Link>
             </Button>
           )}
         </div>
